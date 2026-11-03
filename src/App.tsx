@@ -19,21 +19,28 @@ export default function App() {
 
   // Initialize Lenis for buttery-smooth fluid scrolling
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.15,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smoothWheel: true
-    });
+    let lenis: Lenis | null = null;
+    let reqId: number | null = null;
+    try {
+      lenis = new Lenis({
+        duration: 1.15,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        smoothWheel: true
+      });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
+      function raf(time: number) {
+        lenis?.raf(time);
+        reqId = requestAnimationFrame(raf);
+      }
+
+      reqId = requestAnimationFrame(raf);
+    } catch (e) {
+      console.warn("Smooth scroll fallback:", e);
     }
 
-    requestAnimationFrame(raf);
-
     return () => {
-      lenis.destroy();
+      if (reqId) cancelAnimationFrame(reqId);
+      lenis?.destroy();
     };
   }, []);
 
