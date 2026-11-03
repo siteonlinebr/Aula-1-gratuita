@@ -45,3 +45,31 @@ html.lenis, html.lenis body {
 ::-webkit-scrollbar-thumb:hover {
   background: #94a3b8;
 }
+
+/* Subtle, modern horizontal sheen animation exclusively for the Hero H1 red text */
+@keyframes red-horizontal-sheen {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: -100% 50%;
+  }
+}
+
+.hero-red-sheen {
+  background: linear-gradient(
+    90deg,
+    #dc2626 0%,
+    #ef4444 30%,
+    #fca5a5 50%,
+    #ef4444 70%,
+    #dc2626 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: red-horizontal-sheen 4s ease-in-out infinite;
+  display: inline-block;
+}

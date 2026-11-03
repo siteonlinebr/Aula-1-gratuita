@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Sparkles, Menu, X, ArrowUpRight } from "lucide-react";
+import logoUrl from "../assets/images/logo.jpg";
 
 interface NavbarProps {
   onOpenMentoriaModal: () => void;
@@ -11,7 +12,6 @@ export const Navbar: React.FC<NavbarProps> = ({
   whatsappLink
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const logoUrl = "/assets/aistudio/869586337_18124526891303668_5311906229483552436_n_2ff2a814.jpg";
 
   return (
     <header className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/95 border-b border-slate-200/80 transition-all">

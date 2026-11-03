@@ -43,10 +43,10 @@ export const Hero: React.FC<HeroProps> = ({
           <span>Workflow Completo</span>
         </div>
 
-        {/* Main Headline with subtle red gradient touch on key outcome */}
+        {/* Main Headline with subtle horizontal red sheen on key outcome */}
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-950 leading-[1.12] text-balance max-w-4xl mx-auto">
           Como Editar Vídeos Virais com IA em Escala{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-rose-600 to-slate-900">
+          <span className="hero-red-sheen font-black">
             sem Edição Manual
           </span>
         </h1>

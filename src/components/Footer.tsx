@@ -1,5 +1,6 @@
 import React from "react";
 import { MessageCircle, Send, Sparkles } from "lucide-react";
+import logoUrl from "../assets/images/logo.jpg";
 
 interface FooterProps {
   onOpenMentoria: () => void;
@@ -14,7 +15,6 @@ export const Footer: React.FC<FooterProps> = ({
   telegramLink,
   githubRepo
 }) => {
-  const logoUrl = "/assets/aistudio/869586337_18124526891303668_5311906229483552436_n_2ff2a814.jpg";
 
   return (
     <footer className="bg-white border-t border-slate-200 py-12 pb-24 sm:pb-16 text-slate-600 text-xs">
