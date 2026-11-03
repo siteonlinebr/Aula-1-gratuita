@@ -4,11 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>O Aleatório — Edição Audiovisual com IA</title>
-    <meta name="description" content="Aula 1 — Edição Audiovisual com Inteligência Artificial" />
-    <meta property="og:title" content="O Aleatório — Edição Audiovisual com IA" />
-    <meta property="og:description" content="Aula 1 — Edição Audiovisual com Inteligência Artificial" />
+    <meta name="title" content="O Aleatório — Edição Audiovisual com IA" />
+    <meta name="description" content="Aula 1 — Como Criar e Editar Vídeos Virais com IA em Escala sem Edição Manual. Acesse os materiais, prompt mestre e ferramentas." />
+
+    <!-- Open Graph / WhatsApp / Telegram / Facebook / LinkedIn -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="O Aleatório" />
+    <meta property="og:title" content="O Aleatório — Edição Audiovisual com IA" />
+    <meta property="og:description" content="Aula 1 — Como Criar e Editar Vídeos Virais com IA em Escala sem Edição Manual. Acesse os materiais, prompt mestre e ferramentas." />
+    <meta property="og:image" content="./og-image.jpg" />
+    <meta property="og:image:secure_url" content="./og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="O Aleatório — Edição Audiovisual com IA" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="O Aleatório — Edição Audiovisual com IA" />
+    <meta name="twitter:description" content="Aula 1 — Como Criar e Editar Vídeos Virais com IA em Escala sem Edição Manual. Acesse os materiais, prompt mestre e ferramentas." />
+    <meta name="twitter:image" content="./og-image.jpg" />
+    <meta name="twitter:image:alt" content="O Aleatório — Edição Audiovisual com IA" />
+
+    <!-- Favicon & Touch Icons -->
     <link rel="icon" type="image/jpeg" href="./logo.jpg" />
+    <link rel="apple-touch-icon" href="./logo-preview.jpg" />
+
+    <!-- Dynamic absolute URL resolution for social sharing crawlers -->
+    <script>
+      (function() {
+        try {
+          var base = window.location.href.split('#')[0].split('?')[0];
+          if (!base.endsWith('/')) {
+            base = base.substring(0, base.lastIndexOf('/') + 1);
+          }
+          var ogImg = document.querySelector('meta[property="og:image"]');
+          var ogSecImg = document.querySelector('meta[property="og:image:secure_url"]');
+          var twImg = document.querySelector('meta[name="twitter:image"]');
+          var fullImgUrl = base + 'og-image.jpg';
+          if (ogImg) ogImg.setAttribute('content', fullImgUrl);
+          if (ogSecImg) ogSecImg.setAttribute('content', fullImgUrl);
+          if (twImg) twImg.setAttribute('content', fullImgUrl);
+        } catch (e) {}
+      })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
